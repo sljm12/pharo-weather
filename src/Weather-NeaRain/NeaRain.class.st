@@ -6,8 +6,7 @@ Class {
 
 { #category : #'as yet unclassified' }
 NeaRain >> getRainPic [
-	"comment stating purpose of instance-side message"
-	"scope: class-variables  &  instance-variables"	
+	"Return Rain Picture as a Morph"
 			
 	| url  rain base b32  neaurl |
 	neaurl := NeaRainUrl new.
