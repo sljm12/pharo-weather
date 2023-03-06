@@ -5,38 +5,6 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-NeaRain >> currentDateTimeString [
-	"comment stating purpose of instance-side message"
-	"scope: class-variables  &  instance-variables"	
-			
-	| date dateStr timeStr |
-	date :=(DateAndTime now) asDate.
-	dateStr := (date yyyymmdd) copyReplaceAll:'-' with:''.
-	timeStr := (Time now) hhmm24.
-	^ dateStr,timeStr.
-]
-
-{ #category : #'as yet unclassified' }
-NeaRain >> findRainUrl [
-			
-	| date time |
-	date := (DateAndTime now) asDate.
-	time := (Time now).
-	^ self testRainUrlDate: date time: time. 
-]
-
-{ #category : #'as yet unclassified' }
-NeaRain >> formStringDate: aDate hours: hours minutes: minutes [
-	"comment stating purpose of instance-side message"
-	"scope: class-variables  &  instance-variables"	
-			
-	| dString tString |
-	dString := (aDate yyyymmdd) copyReplaceAll:'-' with:''.
-	tString := (hours asString),(minutes asString).
-	^ dString,tString
-]
-
-{ #category : #'as yet unclassified' }
 NeaRain >> getRainPic [
 	"comment stating purpose of instance-side message"
 	"scope: class-variables  &  instance-variables"	

@@ -9,7 +9,7 @@ Class {
 	#category : #'Weather-NeaRain'
 }
 
-{ #category : #accessing }
+{ #category : #acccessing }
 NeaRainUrl >> date [
 	"comment stating purpose of instance-side message"
 	"scope: class-variables  &  instance-variables"	
@@ -17,7 +17,7 @@ NeaRainUrl >> date [
 	^ date.
 ]
 
-{ #category : #accessing }
+{ #category : #acccessing }
 NeaRainUrl >> date: aDate [
 	"comment stating purpose of instance-side message"
 	"scope: class-variables  &  instance-variables"	
@@ -35,10 +35,9 @@ NeaRainUrl >> formRainUrl: aDateTime [
 	^ baseUrl.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #time }
 NeaRainUrl >> formStringDate: aDate hours: hours minutes: minutes [
-	"comment stating purpose of instance-side message"
-	"scope: class-variables  &  instance-variables"	
+	"Form a date string with hours and minutes"	
 			
 	| dString tString |
 	dString := (aDate yyyymmdd) copyReplaceAll:'-' with:''.
@@ -46,7 +45,7 @@ NeaRainUrl >> formStringDate: aDate hours: hours minutes: minutes [
 	^ dString,tString
 ]
 
-{ #category : #tests }
+{ #category : #acccessing }
 NeaRainUrl >> getRainUrl [
 	"Get a VALID Nea Rain picture, it will iterate 3 times decreasing the time by 5 minutes to check if the url is valid"
 	"scope: class-variables  &  instance-variables"	
@@ -76,7 +75,7 @@ NeaRainUrl >> initialize [
 	date := DateAndTime now asDate.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #time }
 NeaRainUrl >> nearest5floor: aNumber [ 
 	"comment stating purpose of instance-side message"
 	"scope: class-variables  &  instance-variables"	
@@ -86,7 +85,7 @@ NeaRainUrl >> nearest5floor: aNumber [
 	^ aNumber - (aNumber % 5).
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #time }
 NeaRainUrl >> nearest5min [
 	"comment stating purpose of instance-side message"
 	"scope: class-variables  &  instance-variables"	
@@ -96,7 +95,7 @@ NeaRainUrl >> nearest5min [
 	^ self nearest5floor: min.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #time }
 NeaRainUrl >> nearest5minutes: aTime  minus: delta [
 	"Get the nearest time to 5 min acurracy minus the delta"
 	"e.g time is 01 and minus is 5 so we will take 1-5 which is 56 minute then the nearest 5 would be 55"	
@@ -108,7 +107,7 @@ NeaRainUrl >> nearest5minutes: aTime  minus: delta [
 	^ Time hour: result hour24  minute: min second: 0.
 ]
 
-{ #category : #accessing }
+{ #category : #acccessing }
 NeaRainUrl >> time [
 	"comment stating purpose of instance-side message"
 	"scope: class-variables  &  instance-variables"	
@@ -116,7 +115,7 @@ NeaRainUrl >> time [
 	^ time.
 ]
 
-{ #category : #accessing }
+{ #category : #acccessing }
 NeaRainUrl >> time: aTime [
 	"comment stating purpose of instance-side message"
 	"scope: class-variables  &  instance-variables"	
