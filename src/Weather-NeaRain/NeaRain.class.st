@@ -4,7 +4,7 @@ Class {
 	#category : #'Weather-NeaRain'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #acccessing }
 NeaRain >> getRainPic [
 	"Return Rain Picture as a Morph"
 			

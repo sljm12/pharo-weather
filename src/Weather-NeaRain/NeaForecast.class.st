@@ -1,14 +1,11 @@
 Class {
-	#name : #NeaData,
+	#name : #NeaForecast,
 	#superclass : #Object,
-	#instVars : [
-		'hr2'
-	],
 	#category : #'Weather-NeaRain'
 }
 
 { #category : #'as yet unclassified' }
-NeaData >> get2HRWeatherDate: aDate [ 
+NeaForecast >> get2HRWeatherDate: aDate [ 
 	"comment stating purpose of instance-side message"
 	"scope: class-variables  &  instance-variables"	
 			
@@ -20,7 +17,7 @@ NeaData >> get2HRWeatherDate: aDate [
 ]
 
 { #category : #'as yet unclassified' }
-NeaData >> hr2Url [
+NeaForecast >> hr2Url [
 	"comment stating purpose of instance-side message"
 	"scope: class-variables  &  instance-variables"	
 			
@@ -28,9 +25,9 @@ NeaData >> hr2Url [
 ]
 
 { #category : #initialization }
-NeaData >> initialize [
+NeaForecast >> initialize [
 	"comment stating purpose of instance-side message"
 	"scope: class-variables  &  instance-variables"	
 			
-	hr2:= 'https://api.data.gov.sg/environment/2-hour-weather-forecast'.
+
 ]
