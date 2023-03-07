@@ -11,7 +11,7 @@ Class {
 	#category : #'Weather-NeaRain'
 }
 
-{ #category : #acccessing }
+{ #category : #calculations }
 LatLong >> haversineDistance: aLatLong [
 	"Get the distance between 2 Lat Lon based on the Haversine formulat"
   | R dLat dLon a c |
