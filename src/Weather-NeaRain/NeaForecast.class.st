@@ -13,7 +13,7 @@ NeaForecast >> get2HRWeatherDate: aDate [
 	client := ZnClient new.
 	client url: self hr2Url.
 	client queryAt: 'date' put: aDate yyyymmdd.
-	^ NeoJSONReader fromString: client get.
+	^ NeaForecastData new data: (NeoJSONReader fromString: client get).
 ]
 
 { #category : #'as yet unclassified' }
