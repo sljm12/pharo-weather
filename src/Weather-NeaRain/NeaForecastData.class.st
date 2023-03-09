@@ -32,7 +32,7 @@ NeaForecastData >> closest: aLatLong [
 	currentArea data: (self areaMetaData at: 1).
 	dist := currentArea latLon haversineDistance: aLatLong.
 	
-	self areaMetaData do: [ :x |
+	self areaMetaData allButFirst do: [ :x |
 		| tempArea tempDist | 
 		tempArea := NeaArea new.
 		tempArea data: x.
