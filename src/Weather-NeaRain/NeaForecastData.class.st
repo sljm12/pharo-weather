@@ -69,6 +69,14 @@ NeaForecastData >> getForecastByAreaName: aString [
 	^ self forecasts select: [ :x | (x at:'area') = aString. ].
 ]
 
+{ #category : #testing }
+NeaForecastData >> hasData [
+	"comment stating purpose of instance-side message"
+	"scope: class-variables  &  instance-variables"	
+			
+	^ jsonData isNotNil.
+]
+
 { #category : #accessing }
 NeaForecastData >> items [
 	"comment stating purpose of instance-side message"
